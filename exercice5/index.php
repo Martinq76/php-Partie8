@@ -1,15 +1,14 @@
 <?php
-setcookie('pseudo', $_POST['login'], time() + 365 * 24 * 3600, '/', 'partie8');
-setcookie('password', $_POST['mdp'], time() + 365 * 24 * 3600, '/', 'partie8');
+$_COOKIE['pseudo'] = 'sasuke';
+$_COOKIE['password'] = 'itachi';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link rel="stylesheet" href="style.css" />
-        <title>Exercice 3</title>
+        <title>Exercice 5</title>
     </head>
     <body id="backgroundBody">
         <div class="row">
@@ -17,19 +16,10 @@ setcookie('password', $_POST['mdp'], time() + 365 * 24 * 3600, '/', 'partie8');
                 
             </div>
             <div class="col-4 text-center">
-                <h1><b><u>Partie 8 exercice 3</u></b></h1>
-                <form method="POST">
-                    <div class="form-group">
-                        <label for="login">Login : </label>
-                        <input type="text" name="login" class="form-control" aria-describedby="emailHelp" placeholder="Pseudo">
-          
-                    </div>
-                    <div class="form-group">
-                        <label for="mdp">Mot de passe : </label>
-                        <input type="password" name="mdp" class="form-control" placeholder="Mot de passe">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyé</button>
-                </form>
+                <h1><b><u>Partie 8 exercice 5</u></b></h1>
+                <p>Re-bonjour !!!</p>
+                <p>Ton nouveau login est <b><?= $_COOKIE['pseudo']; ?></b> et ton nouveau mot de passe est... <b><?= $_COOKIE['password']; ?></b></p>
+                <h2><b>Merci de nous avoir rendu visite :D</b></h2>
             </div>
             <div class="col-4">
                 
